@@ -1,0 +1,94 @@
+○ grid ○
+:  두방향으로 나아가며 형태를 만들 수 있어서 다양하게 레이아웃이나 그리드 형태에 해당하는 부분을 만들 때 사용.    
+(하지만 flex를 대체할 수 는 없으므로 둘다 적절한 레이아웃에 활용하는 것이 중요) 
+
+
+
+**Grid Container를 위한 속성
+
+ - display : grid 
+   부모박스에 grid선언시 안쪽의 자식 요소를 grid item으로 변환하여 사용가능함.  
+
+
+ - grid-template-columns :  item을 수평방향으로 분배되어지는 값을 설정 하는 속성  
+   단위 > px,%,fr,minmax ....  
+
+ - grid-template-rows :  item을 수직방향으로 분배되어지는 값을 설정 하는 속성  
+   단위 > px,%,fr,minmax ....
+
+ └ 2개 동시 적용  / 단축단위  grid-template
+
+
+  - grid-auto-columns :   item을 수평방향으로 폭을 자동으로 분배하는 속성  
+
+  - grid-auto-rows:   item을 수직방향으로 폭을 자동으로 분배하는 속성  
+
+
+  - 단위 및 함수에 대한 설명  
+    mixmax (최소값,최대값)  
+    fraction : 분배,분수  =  1fr / 1씩 분배  
+    repeat (반복횟수,반복값)  
+    auto-fill / auto-fit  화면을 꽉채우고자하는 값 
+
+
+
+ - column-gap(grid-column-gap) : 열과 열 사이의 간격 혹은 틈을 정의 
+   단위 > px,%,vw,vh,em,rem...
+
+ - row-gap(grid-row-gap) : 행과 행 사이의 간격 혹은 틈을 정의 
+   단위 > px,%,vw,vh,em,rem...
+
+ └ 2개 동시 적용  / 단축단위  gap(grid-gap)
+
+
+
+ - grid-auto-flow : 자동으로 item을 배치하는 알고리즘 속성  
+   └ row(기본값)  각 행 축에 따라 차례로 배치 되는 값  
+   └ column  각 열 축에 따라 차례로 배치 되는 값  
+   └ dense(row dense)  축방향에서 행에 따라 빈 영역을 자동으로 배치  
+   └ column dense 축방향에서 열에 따라 빈 영역을 자동으로 배치
+
+
+
+
+  ◎ 정렬 ◎ 
+ - align-content :  그리드안의 콘텐츠를 그룹으로 수직 정렬 ( 아이템이 부모의 높이보다 작을 경우 )
+   └ stretch(기본값)  늘어나는 상태  
+   └ start  축방향에서 시작점으로부터 정렬  
+   └ center 축방향에서 가운데로 정렬
+   └ end  축방향에서 끝점으로부터 정렬  
+   └ space-between item요소를 좌우 여백을 모두 사용하면서 분배하는 정렬  
+   └ space-around item요소의 좌우여백을 두며 분배 정렬  
+   
+ - justify-content :  그리드안의 콘텐츠를 그룹으로 수평 정렬 ( 아이템이 부모의 넓이보다 작을 경우 )
+   └ stretch(기본값)  늘어나는 상태  
+   └ start  축방향에서 시작점으로부터 정렬  
+   └ center 축방향에서 가운데로 정렬
+   └ end  축방향에서 끝점으로부터 정렬  
+   └ space-between item요소를 좌우 여백을 모두 사용하면서 분배하는 정렬  
+   └ space-around item요소의 좌우여백을 두며 분배 정렬  
+
+
+   └ 2개 동시 적용  / 단축단위  place-content : align justify
+
+
+
+ - align-items : 그리드 아이템들을 수직 정렬
+   └ stretch(기본값)  늘어나는 상태  
+   └ start  축방향에서 시작점으로부터 정렬  
+   └ center 축방향에서 가운데로 정렬
+   └ end  축방향에서 끝점으로부터 정렬  
+
+
+ - justify-items : 그리드 아이템들을 수평 정렬
+   └ stretch(기본값)  늘어나는 상태  
+   └ start  축방향에서 시작점으로부터 정렬  
+   └ center 축방향에서 가운데로 정렬
+   └ end  축방향에서 끝점으로부터 정렬  
+
+
+   └  2개 동시 적용  / 단축단위  place-items : align justify 
+
+
+
+   

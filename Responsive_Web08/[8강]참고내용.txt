@@ -1,0 +1,50 @@
+○자식박스에 부여가능한 속성 - item
+
+
+- flex-basis :   item의 기본 크기를 지정 / (기본값)auto
+ └ *grow의 증가 너비 비율에 상관없이 요소가 가지고 있을 기본 너비를 설정
+  기본너비가 없다면 내용물 만큼에 대한 폭으로 가지게 되지만,  
+  최소한의 item의 기본너비를 설정 후 넘치는 내용물은 자동으로 늘어나게 표현  
+
+
+
+- flex-grow :  item의 증가 너비 비율을 지정  /  기본값: 0
+  ★ container의 전체 너비를 알지 못하더라도 item들의 너비 비율을 설정을 하므로써 화면에 출력할 수 있다.
+  (***item이 가변 너비가 아니거나, 값이 0일 경우 효과 없음)   >>  width:100px의 경우 
+  ex)  grow값을 3개의 item에 각각  
+  item1 > 1   /   item2 > 2   /  item3 > 1 을 분배를 해주면 총 4에 해당하는 값으로 
+  4/1 = 25%로 분배가 됩니다.   
+ 
+
+
+- flex-shrink:  item의 감소 너비 비율을 지정  /  기본값: 1
+  * 사용빈도수가 높지 않음
+
+
+
+- flex : flex-grow, flex-shrink, flex-basis 단축 속성
+        - flex : grow shrink basis;
+        - 0 1 auto : 기본값
+        - 0 auto (= 0 1 auto)
+        - auto (= 1 1 auto)
+        - initial (= 0 1 auto)
+        - none (= 0 0 auto)        
+        
+        ** flex:1; (= flex:1 1 0;)
+        여기서의 flex-basis의 기본값은 0이다.
+
+
+
+- align-self : 교차축에서 개별 item의 정렬 방법 지정 / 부모에 높이가 존재해야함(align-items 속성보다 우선)
+        - auto : 기본값, container의 align-items 속성을 상속
+        - stretch : container의 교차축을 채우기 위해 item을 늘림
+        - flex-start : item을 각 줄의 시작점으로 배치
+        - flex-end : item을 각 줄의 끝점으로 배치
+        - center : item을 가운데 배치
+        - baseline : item을 문자 기준선에 배치
+
+
+
+- order : item들의 배치 순서를 지정 (순번)
+  정수로 지정(음수 가능) 값이 작을 수록 먼저 배치(기본값 0) 
+   

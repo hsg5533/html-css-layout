@@ -1,0 +1,77 @@
+● table ●
+table은 부모의 역할로 안에 자식으로 존재하는 아이템은 td가 되어짐.  
+
+
+ table은 표의 성격을 가지고 있으며, 이 표의 성격을 응용하게 되면
+ 컨텐츠 배치시 유용하게 응용가능. 이를 위해서는 원래의 표가 가진 스타일을 
+ 파악해보면 좋음.  
+
+ [ table base css ]  
+
+ table {
+    display: table;  
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+  }
+
+ - border-collapse : table의 테두리와 td의 테두리 사이간격 "유무" 결정하는 속성
+   > 기본값 : separate (간격있게)
+   > collapse :  table의 테두리와 td의 테두리 사이간격 제거 (한줄표현)
+
+ - text-indent : 들여쓰기와 내어쓰기를 결정하는 속성 
+   > 기본값은 0 / 그외 숫자로 표현  
+
+ - border-spacing : table의 테두리와 td의 테두리 사이의 간격 (값부여) 
+   >  기본값 : 2px /  숫자로 표현 
+
+
+
+ [ td base css ]  
+
+ td{
+    display: table-cell;
+    vertical-align: inherit;
+  }
+
+
+ - vertical-align : inline 또는 table-cell에서의 수직 정렬을 지정하는 속성  
+   ( * inline과 table-cell 엘리먼트에만 적용된다는 것에 주의  )
+   >  baseline (기본값)
+   >  middle : 수직상 중앙 정렬 
+   >  top : 수직상 상단 정렬 
+   >  bottom : 수직상 하단 정렬 
+
+
+
+
+
+[ tr base css ]  
+
+ tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+ }
+
+ - 많이 사용하지 않음.  
+
+
+
+----------------------------------------------------------------------------------------------
+
+
+ - display : table  
+ :  보여지는 속성을  table로  만들어주는 성격 
+
+  - display : table-cell  
+ :  보여지는 속성을  table-cell 즉 td로  만들어주는 성격
+    >>  td의 성격은 자동으로 컨텐츠에 따라 폭이 분배
+    >>  자동으로 옆으로 칸이 나열되며 만들어짐 
+    
+   - display : table-row  
+ :  보여지는 속성을  table-row  즉 tr로  만들어주는 성격
+
+ 

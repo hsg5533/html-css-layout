@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        height: 100%;
+      }
+      .per {
+        width: 50%;
+        /* height: 100%를 지정하려면 부모에게도
+             height: 100%을 지정해야 합니다. 그래야 상속받아서 쓸 수 있어요 */
+        padding: 40px 0;
+        overflow: hidden;
+        background-color: blueviolet;
+        float: left;
+      }
+      .per:nth-child(2) {
+        background-color: burlywood;
+      }
+      .vw {
+        width: 50vw; /*1%>1vw*/
+        height: 100vh;
+        overflow: hidden;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 가변이 가능한 %
+    <div class="per">%</div>
+    <div class="per">%</div> -->
+
+    <!-- vh/vw : Viewport Width / Viewport Height
+    뷰포트를 기준으로 하여 폭을 지정하는 단위 
+    화면상 비율을 얼마큼 채울 것인가를 결정 
+    1vw = 뷰포트너비의 1%  /  1000px = 1vw(10px) "1000의 1%" 
+    -->
+
+    <div class="vw">뷰포트 기준</div>
+  </body>
+</html>
